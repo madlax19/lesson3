@@ -23,6 +23,12 @@
 - (PlayingCardDeck *)deck {
 	if (!_deck) {
 		_deck = [[PlayingCardDeck alloc] init];
+        Card *card1 = [[Card alloc] init];
+        card1.contents = @"9♥";
+        Card *card2 = [[Card alloc] init];
+        card2.contents = @"vrrrr";
+        [_deck addCard:card1];
+        [_deck addCard:card2];
 	}
 	return _deck;
 }
