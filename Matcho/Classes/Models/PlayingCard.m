@@ -54,6 +54,13 @@
 	return [NSString stringWithFormat:@"%@%@", [PlayingCard ranks][self.rank], self.suit];
 }
 
+- (UIColor*)cardColor {
+    if([self.suit isEqualToString:[PlayingCard suits][2]] || [self.suit isEqualToString:[PlayingCard suits][3]]) {
+        return [UIColor redColor];
+    }
+    return [UIColor blackColor];
+}
+
 
 - (int) match:(NSArray *)otherCards {
     int sum = 0;

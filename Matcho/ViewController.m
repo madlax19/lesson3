@@ -47,6 +47,7 @@
                     forState:UIControlStateNormal];
             [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
                     forState:UIControlStateNormal];
+            [sender setTitleColor:card.cardColor forState: UIControlStateNormal];
         }
 	}
 }

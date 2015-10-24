@@ -7,6 +7,7 @@
 //
 
 @import Foundation;
+@import UIKit;
 
 @interface Card : NSObject
 
@@ -14,6 +15,7 @@
 
 @property (nonatomic, getter = isChosen) BOOL chosen;
 @property (nonatomic, getter = isMatched) BOOL matched;
+@property (nonatomic, readonly) UIColor *cardColor;
 
 - (int)match:(NSArray *)otherCards;
 

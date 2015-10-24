@@ -26,4 +26,8 @@
     return score;
 }
 
+- (UIColor*)cardColor {
+    return [UIColor lightGrayColor];
+}
+
 @end
