@@ -42,10 +42,12 @@
 						  forState:UIControlStateNormal];
 	} else {
 		Card *card = [self.deck drawRandomCard];
-		[sender setTitle:card.contents
-				forState:UIControlStateNormal];
-		[sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
-						  forState:UIControlStateNormal];
+        if(card != nil){
+            [sender setTitle:card.contents
+                    forState:UIControlStateNormal];
+            [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
+                    forState:UIControlStateNormal];
+        }
 	}
 }
 
