@@ -15,10 +15,17 @@
 @property (nonatomic, strong) PlayingCardDeck *deck;
 
 @property (weak, nonatomic) IBOutlet UIButton *cardButton;
+@property (weak, nonatomic) IBOutlet UILabel *countLabel;
+@property NSInteger count;
 
 @end
 
 @implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.count = 0;
+}
 
 - (PlayingCardDeck *)deck {
 	if (!_deck) {
@@ -48,6 +55,8 @@
             [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
                     forState:UIControlStateNormal];
             [sender setTitleColor:card.cardColor forState: UIControlStateNormal];
+            self.count = self.count + 1;
+            self.countLabel.text = [NSString stringWithFormat:@"%li", self.count];
         }
 	}
 }
